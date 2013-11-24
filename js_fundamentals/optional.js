@@ -1,3 +1,26 @@
+// Number converter
+// i.e. format 12345678 into 12,345,678
+
+(function(){
+
+	var number = 12;
+	number = number.toString().split("").reverse("");
+
+	var formatted = "";
+
+	console.log(number.length);
+
+	for (i=0; i <= number.length-1 ; i++){
+			if(i > 2 && i % 3===0){
+				formatted = formatted.concat(",");
+			}
+		formatted = formatted.concat(number[i]);
+	}
+	console.log(typeof formatted);
+	console.log(formatted.split("").reverse().join(""));
+
+})();
+
 // Exercise: GreaseMonkey 
 
 // In these exercises, you'll write GreaseMonkey scripts that will get run on webpage. First, learn more about GreaseMonkey:
